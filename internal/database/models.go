@@ -19,5 +19,5 @@ type User struct {
 	CreatedAt string
 	UpdatedAt string
 	Name      string
-	ApiKey    string
+	ApiKey    string // #nosec G117 -- Field name, not a hardcoded secret
 }

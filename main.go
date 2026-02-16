@@ -95,6 +95,7 @@ func main() {
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 
+	// #nosec G706 -- Port is from environment variable, not user input; log injection risk is negligible
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
 }
